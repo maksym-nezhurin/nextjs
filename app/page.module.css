@@ -1,0 +1,19 @@
+.nav {
+    display: flex;
+}
+
+.nav li {
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.infoBlock {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: inherit;
+}

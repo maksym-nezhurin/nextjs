@@ -25,3 +25,34 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+h2, h3, h4 {
+  padding: 0.75rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+  h2, h3, h4 {
+    font-size: 1.25rem;
+  }
+}
+
+.innerContainer {
+  padding: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  flex: 1;
+}

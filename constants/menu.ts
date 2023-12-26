@@ -9,7 +9,7 @@ export const MenuItems: IMenuItem[] = [
     },
     {
         id: 2,
-        path: '/works/some',
+        path: '/works',
         label: 'Works',
         description: 'Here you can find my works'
     },

@@ -7,7 +7,6 @@ export default function Two(): JSX.Element {
 		<div className="socialMediaItems">
 			{
 				Object.values(socialList).map((socialListItem) => {
-
 					return <div key={socialListItem.id}>
 						<div className="imageWrapper">
 							<img src="" alt=""/>

@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import { Navigation } from "@/components/navigation/navigation";
 import cn from 'classname';
 
-import styles from './page.module.css';
+import './page.css';
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] });
@@ -28,7 +28,7 @@ export default function RootLayout({
                       Code is in my mind....&nbsp;
                   </p>
                   <div className={cn('fixed bottom-0 left-0 h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none',
-                      styles.infoBlock)}>
+                      'infoBlock')}>
                       <p>Maksym Nezhurin (Senior Software Engineer)</p>
                       <p>Personal Blog</p>
                   </div>
@@ -36,12 +36,7 @@ export default function RootLayout({
 
               <Navigation />
 
-              <div className="
-              innerContainer lg:border lg:rounded-xl
-               {/*lg:bg-gray-200*/}
-               ">
-                  {children}
-              </div>
+              <div className="innerContainer lg:border lg:rounded-xl">{children}</div>
           </main>
       </body>
     </html>

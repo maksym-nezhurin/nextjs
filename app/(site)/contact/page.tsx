@@ -1,10 +1,5 @@
 
 export default async function PageAbout() {
-	const contactItems = [];
-	const renderContact = (item) => (<div className="contactItem">
-		{}
-	</div>)
-
 	return <>
 		<h3 className='text-left'>My name is Maksym Nezhurin</h3>
 		<p>
@@ -15,8 +10,6 @@ export default async function PageAbout() {
 
 		<div className="contactPage">
 			<h4 className="text-left contactTitle">You can contact me with: </h4>
-
-			<div className="contactItems">{contactItems.map(contactItem => renderContact(contactItem))}</div>
 		</div>
 	</>
 }

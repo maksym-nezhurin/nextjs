@@ -1,4 +1,4 @@
-import {ISkill, SkillName} from "@/constants/skills";
+import { SkillName } from "@/constants/skills";
 import {IImage} from "@/interfaces/image";
 
 interface ITechnology {
@@ -105,4 +105,16 @@ export const Technologies: Record<SkillName, ITechnology> = {
         },
         description: '',
     },
+   /* GitHub: {
+        image: {
+            src: 'images/github.jpeg',
+            title: ''
+        }
+    },
+    GitHubActions: {
+        image: {
+            src: 'images/githubactions.png',
+            title: ''
+        }
+    }*/
 }

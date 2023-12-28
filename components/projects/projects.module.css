@@ -1,0 +1,13 @@
+.projects {
+
+}
+
+/* not in use yet */
+.projectRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.projectTitle {
+    font-weight: bold;
+}

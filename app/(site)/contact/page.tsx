@@ -9,7 +9,7 @@ export default async function PageAbout() {
 		</p>
 
 		<div className="contactPage">
-			<h4 className="text-left contactTitle">You can contact me with: </h4>
+			<h4 className="contactTitle tracking-tight text-gray-500 md:text-lg dark:text-gray-400">You can contact me with: </h4>
 		</div>
 	</>
 }

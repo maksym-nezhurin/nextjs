@@ -1,10 +1,11 @@
-import {JSX} from "react";
+import {JSX, ReactElement} from "react";
 
-export type SocialItemName = 'LinkedIn' | 'Instagram' | 'FaceBook' | 'GitHub' | 'Upwork';
+export type SocialNetworkItemName = 'LinkedIn' | 'Instagram' | 'FaceBook';
+export type WorkNetworkItemName = 'GitHub' | 'Upwork';
 
 export interface ISocialMediaItem {
     id: string | number,
     url: string,
-    label: SocialItemName,
-    icon?: JSX.Element
+    label: SocialNetworkItemName | WorkNetworkItemName,
+    icon: ReactElement
 }

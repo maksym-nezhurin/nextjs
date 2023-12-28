@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react';
 import { Metadata } from 'next';
 import Link from "next/link";
+import { Projects } from "@/components/projects/projects";
+import { projects } from "@/constants/projects";
 
 export const metadata: Metadata = {
 	title: 'Page -- Works'
@@ -27,11 +29,6 @@ const WORKS_DATA: Record<WORKS_PAGES, IWorkData> = {
 	}
 }
 
-const works = [
-	{ id: 1, text: 'first product' },
-	{ id: 2, text: 'second product' },
-];
-
 type A = Awaited<Promise<IWorkData>>;
 
 export default async function PageWorks() {
@@ -54,6 +51,11 @@ export default async function PageWorks() {
 					</Link>
 				</li>
 			</ul>
+
+			<div>
+				<h4>Projects:</h4>
+				<Projects projects={projects} />
+			</div>
 		</div>
 	)
 }

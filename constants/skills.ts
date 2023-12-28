@@ -26,7 +26,7 @@ export interface ISkill {
     name?: SkillName,
     description?: string,
     status: SkillStatus,
-    years?: number
+    years: number
 }
 
 export const SKILLS: Record<SkillName, ISkill> = {
@@ -93,24 +93,26 @@ export const SKILLS: Record<SkillName, ISkill> = {
     NextJS: {
         id: 10,
         status: SkillStatus.unknown,
-        description: 'React framework for building server-rendered and statically generated web applications.'
+        description: 'React framework for building server-rendered and statically generated web applications.',
+        years: 0
     },
     NestJS: {
         id: 11,
         status: SkillStatus.incompetence,
-        description: 'Progressive Node.js framework for building scalable server-side applications with TypeScript.'
+        description: 'Progressive Node.js framework for building scalable server-side applications with TypeScript.',
+        years: 0
     },
     Angular: {
         id: 12,
         status: SkillStatus.incompetence,
         description: 'TypeScript-based open-source framework for building web applications, developed and maintained by Google.',
-        years: 5
+        years: 0
     },
     Vue: {
         id: 13,
         status: SkillStatus.unknown,
         description: 'Progressive JavaScript framework for building user interfaces, emphasizing simplicity and flexibility.',
-        years: 5
+        years: 0
     }
 };
 

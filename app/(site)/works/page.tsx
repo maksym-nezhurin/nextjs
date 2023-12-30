@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Metadata } from 'next';
 import Link from "next/link";
-import { Projects } from "@/components/projects/projects";
+import { Projects } from "@/components/projects/Projects";
 import { projects } from "@/constants/projects";
 
 export const metadata: Metadata = {

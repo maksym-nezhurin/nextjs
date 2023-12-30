@@ -47,7 +47,7 @@ export const SkillList = (props) => {
     }
 
     const renderSkillByExperience = (label, skills: ISkill[]) => {
-        return <div>
+        return <>
             <h4 className={styles.skillLevelLabel}>{label}</h4>
             <div className={styles.skill__items}>
                 {
@@ -56,7 +56,7 @@ export const SkillList = (props) => {
                     </div>)
                 }
             </div>
-        </div>
+        </>
     };
 
     return (<div className={styles.skillList}>

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import {SkillList} from "@/components/skillList";
+import {SkillList} from "@/components/skillList/SkillList";
 import {SKILLS} from "@/constants/skills";
 
 export const metadata: Metadata = {

@@ -1,4 +1,4 @@
-import {JSX, ReactElement} from "react";
+import { ReactElement } from "react";
 
 export type SocialNetworkItemName = 'LinkedIn' | 'Instagram' | 'FaceBook';
 export type WorkNetworkItemName = 'GitHub' | 'Upwork';

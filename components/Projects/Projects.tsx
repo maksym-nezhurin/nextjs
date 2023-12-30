@@ -1,8 +1,8 @@
 'use client'
 
 import {IProject} from "@/constants/projects";
-import {ProjectCard} from "@/components/projects/projectCard/projectCard";
 import {ReactElement, useReducer} from "react";
+import {ProjectRowItem} from "@/components/projects/ProjectItem/ProjectItem";
 import {sortReducer, SortReducerState} from "@/components/skillList/sort.reducer";
 import {SortEnum} from "@/components/sort/sort.props";
 
@@ -17,8 +17,7 @@ export const Projects = (props: IProjectsProps): ReactElement => {
         projects: props.projects,
         sort: SortEnum.name,
     };
-    const [{ projects, sort }, dispatch ] = useReducer(sortReducer, initialState);
-    console.log('sortedProjects', projects)
+    const [{ projects }, dispatch ] = useReducer(sortReducer, initialState);
 
     const setSort = (sort: SortEnum) => {
         dispatch({ type: sort })
@@ -53,31 +52,16 @@ export const Projects = (props: IProjectsProps): ReactElement => {
                     <div className="font-bold"><span className="sr-only">Edit</span></div>
                 </div>
 
-                {projects.map(project => <div key={project.id} className="flex justify-around bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <div className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{project.name}</div>
-                    <div className="px-6 py-4">{project.company}</div>
-                    <div className="px-6 py-4">{project.duration}</div>
-                    <div className="px-6 py-4" >{project.finishedAt}</div>
-                    <div className="px-6 py-4">
-                        <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    </div>
-                </div>)}
+                {projects.map(project => <ProjectRowItem key={project.id} layout {...project} /> )}
             </div>
         </div>
 
-
         {projects.map(project => {
         return <div key={project.id} className={styles.projectItem}>
-
             <h3 className="text-left">Company {project.company}</h3>
             <div>Project: <span className={styles.projectTitle}>{project.name}</span></div>
             <div>{project.description}</div>
             <div>Was working for a {project.duration} years and finished in {project.finishedAt}</div>
-
-
-            <ProjectCard />
-
-
         </div>
     })}</div>)
 }

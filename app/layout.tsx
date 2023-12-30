@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Navigation } from "@/components/navigation/navigation";
-import { Up } from "@/components/up/up";
+import { Up } from "@/components/up/Up";
 import cn from 'classname';
 
 import './page.css';

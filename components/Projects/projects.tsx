@@ -1,8 +1,8 @@
 'use client'
 
 import {IProject} from "@/constants/projects";
-import {ReactElement, useReducer} from "react";
-import {ProjectRowItem} from "@/components/projects/ProjectItem/ProjectItem";
+import {ReactElement, ReducerWithoutAction, ReducerState, useReducer} from "react";
+import {ProjectRowItem} from "@/components/Projects/projectItem/projectItem";
 import {sortReducer, SortReducerState} from "@/components/skillList/sort.reducer";
 import {SortEnum} from "@/components/sort/sort.props";
 
@@ -17,10 +17,14 @@ export const Projects = (props: IProjectsProps): ReactElement => {
         projects: props.projects,
         sort: SortEnum.name,
     };
-    const [{ projects }, dispatch ] = useReducer(sortReducer, initialState);
+    const [{ projects, sort }, dispatch ] = useReducer(sortReducer, initialState);
+
+    console.log('sort', sort)
 
     const setSort = (sort: SortEnum) => {
-        dispatch({ type: sort })
+        const action: { type: SortEnum } = { type: sort };
+        // @ts-ignore
+        dispatch(action)
     }
 
     return (<div className="">

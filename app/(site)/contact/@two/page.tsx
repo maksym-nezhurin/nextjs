@@ -1,4 +1,3 @@
-'use-client'
 import {socialList, workNetworkList} from "@/constants/contacts";
 import {JSX} from "react";
 import cn from 'classname';
@@ -39,7 +38,7 @@ export default function Two(): JSX.Element {
 			{
 				Object.values(workNetworkList).map((item) => {
 					const { icon } = item;
-					console.log('icon', icon)
+
 					return <a key={item.id} href={item.url} className={cn("font-medium text-blue-600 dark:text-blue-500 hover:underline", styles.mediaItem)}>
 						{item.icon && <div className="imageWrapper">
 							<item.icon />

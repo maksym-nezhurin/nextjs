@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import { Metadata } from 'next';
 import Link from "next/link";
-import { Projects } from "@/components/projects/Projects";
-import { projects } from "@/constants/projects";
+import { Projects } from "@/components/Projects/projects";
+import { projectsItems } from "@/constants/projects";
 
 export const metadata: Metadata = {
 	title: 'Page -- Works'
@@ -54,7 +54,7 @@ export default async function PageWorks() {
 
 			<div>
 				<h4>Projects:</h4>
-				<Projects projects={projects} />
+				<Projects projects={projectsItems} />
 			</div>
 		</div>
 	)

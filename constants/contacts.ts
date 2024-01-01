@@ -1,4 +1,4 @@
-import {ISocialMediaItem, SocialNetworkItemName, WorkNetworkItemName, Shototam} from "@/interfaces/socialMediaItem";
+import { ISocialMediaItem, SocialNetworkItemName, WorkNetworkItemName } from "@/interfaces/socialMediaItem";
 import {LinkedinIcon} from "@/app/icons/linkedIn";
 import {InstagramIcon} from "@/app/icons/instagram";
 import {FacebookIcon} from "@/app/icons/facebook";

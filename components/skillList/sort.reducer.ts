@@ -22,6 +22,7 @@ export const sortReducer = (state: SortReducerState, action: SortActions ) => {
             }
         default:
             console.log('undefined sort type');
-            return state.projects;
+            throw new Error();
+            // return state.projects;
     }
 }

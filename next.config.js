@@ -1,13 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    webpack(config) {
+    webpack(config, options) {
         config.module.rules.push({
-            test: /\.svg$/,
-            issuer: {
-                and: [/\.(js|ts)x?$/]
+            loader: '@svgr/webpack',
+            issuer: /\.(js|ts)x?$/,
+            options:{
+                prettier: false,
+                svgo: true,
+                svgoConfig: {
+                    plugins: [{
+                        name: 'preset-default',
+                        params: {
+                            override: {
+                                removeViewBox: false
+                            }
+                        }
+                    }]
+                },
+                titleProp: true,
             },
-
-            use: ['@svgr/webpack'],
+            test: /\.svg$/
         });
 
         return config;

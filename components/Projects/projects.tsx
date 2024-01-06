@@ -1,7 +1,7 @@
 'use client'
 
 import {IProject} from "@/constants/projects";
-import {ReactElement, ReducerWithoutAction, ReducerState, useReducer} from "react";
+import {ReactElement, useReducer} from "react";
 import {ProjectRowItem} from "@/components/Projects/projectItem/projectItem";
 import {sortReducer, SortReducerState} from "@/components/skillList/sort.reducer";
 import {SortEnum} from "@/components/sort/sort.props";
@@ -17,20 +17,20 @@ export const Projects = (props: IProjectsProps): ReactElement => {
         projects: props.projects,
         sort: SortEnum.name,
     };
-    const [{ projects, sort }, dispatch ] = useReducer(sortReducer, initialState);
+    const [{projects, sort}, dispatch] = useReducer(sortReducer, initialState);
 
     console.log('sort', sort)
 
     const setSort = (sort: SortEnum) => {
-        const action: { type: SortEnum } = { type: sort };
-        // @ts-ignore
+        const action: { type: SortEnum } = {type: sort};
         dispatch(action)
     }
 
-    return (<div className="">
+    return (<div className={styles.projects}>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <div className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <div className="text-xs text-gray-700 flex justify-around uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <div
+                    className={`${styles.projectRow} ${styles.projectHeaderRow} text-xs text-gray-700 flex justify-around uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400`}>
                     <div>
                         <a href="#" className="font-bold flex" onClick={() => setSort(SortEnum.name)}>
                             <span>Name</span>
@@ -41,8 +41,8 @@ export const Projects = (props: IProjectsProps): ReactElement => {
                             </svg>
                         </a>
                     </div>
-                    <div className="font-bold">2 second</div>
-                    <div className="font-bold">3 third</div>
+                    <div className="font-bold">Company Name</div>
+                    <div className="font-bold">Work duration</div>
                     <div className="font-bold">
                         <a href="#" className="flex" onClick={() => setSort(SortEnum.finishedAt)}>
                             <span>Finished at</span>
@@ -53,19 +53,13 @@ export const Projects = (props: IProjectsProps): ReactElement => {
                             </svg>
                         </a>
                     </div>
+                    <div className="font-bold">Rating</div>
                     <div className="font-bold"><span className="sr-only">Edit</span></div>
                 </div>
 
-                {projects.map(project => <ProjectRowItem key={project.id} layout {...project} /> )}
+                {projects.map(project => (
+                    <ProjectRowItem key={project.id} className={styles.projectRow} layout {...project} />))}
             </div>
         </div>
-
-        {projects.map(project => {
-        return <div key={project.id} className={styles.projectItem}>
-            <h3 className="text-left">Company {project.company}</h3>
-            <div>Project: <span className={styles.projectTitle}>{project.name}</span></div>
-            <div>{project.description}</div>
-            <div>Was working for a {project.duration} years and finished in {project.finishedAt}</div>
-        </div>
-    })}</div>)
+    </div>)
 }

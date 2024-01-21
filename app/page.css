@@ -17,3 +17,14 @@
     justify-content: end;
     align-items: inherit;
 }
+
+.formWrapper {
+    display: grid;
+    text-align: center;
+    grid-template-rows: 1fr 2fr;
+}
+
+.formInnerWrapper {
+    display: flex;
+    justify-content: center;
+}

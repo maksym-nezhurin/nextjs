@@ -9,6 +9,12 @@
   --primary: #7653FC;
   --yellow: #f1b23f;
   --red: rgb(232, 28, 86);
+  --black: #3B434E;
+  --gray-light: #EBEBEB;
+  --gray: #A4A4A4;
+  --gray-dark: #6C7077;
+  --white: white;
+  --font-family: "Noto Sans KR", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

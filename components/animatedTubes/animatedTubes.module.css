@@ -1,0 +1,34 @@
+.container {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 6rem 2rem;
+}
+
+.animatedItem {
+    position: absolute;
+    z-index: 3;
+    left: 40%;
+    top: 20%;
+}
+
+.animatedItemClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+}
+
+.background {
+    background: rgba(0,0,0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.backgroundActive {
+    z-index: 2;
+}

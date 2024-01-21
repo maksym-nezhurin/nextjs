@@ -10,6 +10,7 @@ import styles from './feedbackForm.module.css';
 import {input as Input} from "@/components/input/input";
 import {textarea as Textarea} from "@/components/textarea/textarea";
 import {Rating} from "@/components/rating/rating";
+import {ButtonIcon} from "@/components/buttonIcon/buttonIcon";
 
 export const FeedbackForm = (props: FeedbackFormProps) => {
     const { className, isOpened } = props;
@@ -81,7 +82,7 @@ export const FeedbackForm = (props: FeedbackFormProps) => {
                     />
                 </div>
                 <div className={styles.submit}>
-                    <button type={'submit'} tabIndex={isOpened ? 0 : -1} onClick={() => clearErrors()}>Send</button>
+                    <ButtonIcon icon={"done"} className="text-center" appearance="white" type={'submit'} tabIndex={isOpened ? 0 : -1} onClick={() => clearErrors()} text={'Submit'}/>
                     <br/>
                     <span className={styles.info}>* We will check the feedback before publishing</span>
                 </div>

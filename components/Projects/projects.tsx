@@ -19,8 +19,6 @@ export const Projects = (props: IProjectsProps): ReactElement => {
     };
     const [{projects, sort}, dispatch] = useReducer(sortReducer, initialState);
 
-    console.log('sort', sort)
-
     const setSort = (sort: SortEnum) => {
         const action: { type: SortEnum } = {type: sort};
         dispatch(action)

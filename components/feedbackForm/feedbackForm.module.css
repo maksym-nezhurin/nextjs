@@ -3,13 +3,16 @@
     align-items: center;
     font-size: 14px;
     line-height: 24px;
-    grid-template-columns: [start] auto 1fr auto [end];
+    grid-template-columns: [start] auto auto [end];
     gap: 20px 30px;
 }
 
 .description,
 .submit {
     grid-column: start / end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {

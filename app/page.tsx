@@ -29,9 +29,7 @@ export default function Home() {
           <div className={'formWrapper'}>
               <h3 style={{ alignSelf: 'center' }}>Please, send me your feedback</h3>
               <div className="formInnerWrapper">
-                  <div></div>
-                  <FeedbackForm className="ssd" isOpened={true} />
-                  <div></div>
+                  <FeedbackForm className="feedbackForm" isOpened={true} />
               </div>
           </div>
       </>

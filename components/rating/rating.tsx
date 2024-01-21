@@ -1,10 +1,11 @@
-import React, {useEffect, useState, KeyboardEvent, forwardRef, ForwardedRef, useRef, JSX} from "react";
+import React, { useEffect, useState, KeyboardEvent, forwardRef, ForwardedRef, useRef, JSX} from "react";
 import {RatingProps} from './rating.props'
 import cn from 'classname'
 
 import StarIcon from './star.svg'
 import styles from './rating.module.css'
 
+// eslint-disable-next-line
 export const Rating = forwardRef(({
                                       isEditable = false,
                                       error,
@@ -15,6 +16,28 @@ export const Rating = forwardRef(({
                                   }: RatingProps, ref: ForwardedRef<any>) => {
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
     const ratingArrayRef = useRef<(HTMLSpanElement | null)[]>([]);
+    const constructRating = (currentRating: number) => {
+        const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
+            return (
+                <span
+                    key={i}
+                    className={cn(styles.star, {
+                        [styles.filled]: i < currentRating,
+                        [styles.editable]: isEditable
+                    })}
+                    onMouseEnter={() => changeDisplay(i + 1)}
+                    onMouseLeave={() => changeDisplay(rating)}
+                    onClick={() => onClick(i + 1)}
+                    tabIndex={computeFocus(rating, i)}
+                    onKeyDown={handleKey}
+                    ref={r => ratingArrayRef.current?.push(r)}
+                >
+                   <StarIcon/>
+               </span>
+            )
+        });
+        setRatingArray(updatedArray);
+    }
 
     useEffect(() => {
         constructRating(rating);
@@ -35,28 +58,6 @@ export const Rating = forwardRef(({
 
         return -1;
     };
-
-    const constructRating = (currentRating: number) => {
-        const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
-            return (
-                <span
-                    className={cn(styles.star, {
-                        [styles.filled]: i < currentRating,
-                        [styles.editable]: isEditable
-                    })}
-                    onMouseEnter={() => changeDisplay(i + 1)}
-                    onMouseLeave={() => changeDisplay(rating)}
-                    onClick={() => onClick(i + 1)}
-                    tabIndex={computeFocus(rating, i)}
-                    onKeyDown={handleKey}
-                    ref={r => ratingArrayRef.current?.push(r)}
-                >
-                   <StarIcon/>
-               </span>
-            )
-        });
-        setRatingArray(updatedArray);
-    }
 
     const changeDisplay = (i: number) => {
         if (!isEditable) {

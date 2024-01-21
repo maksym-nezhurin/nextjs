@@ -2,7 +2,7 @@
 
 import {IProject} from "@/constants/projects";
 import {ReactElement, useReducer} from "react";
-import {ProjectRowItem} from "@/components/Projects/projectItem/projectItem";
+import { ProjectRowItem } from "@/components/Projects/projectItem/projectItem";
 import {sortReducer, SortReducerState} from "@/components/skillList/sort.reducer";
 import {SortEnum} from "@/components/sort/sort.props";
 

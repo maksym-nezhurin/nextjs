@@ -1,5 +1,6 @@
 import {ReactElement} from "react";
 import {IImage} from "@/interfaces/image";
+import Image from "next/image";
 
 import './card.css';
 
@@ -8,7 +9,11 @@ export interface ICardProps {
     image: IImage,
     title: string,
     description: string,
-    author?: string
+    author?: {
+        src: string,
+        name: string,
+        date: string
+    }
     subtitle: string
 }
 
@@ -37,11 +42,13 @@ export const Card = (props: ICardProps):ReactElement => {
                 </div>
                 {
                     author && (<div className="flex items-center">
-                        <img className="w-10 h-10 rounded-full mr-4" src="/img/jonathan.jpg"
-                             alt="Avatar of Jonathan Reinink" />
+                        <Image
+                            className="w-10 h-10 rounded-full mr-4" src={author.src || ''}
+                            alt="Avatar of Jonathan Reinink"
+                        />
                         <div className="text-sm">
-                            <p className="text-gray-900 leading-none">Jonathan Reinink</p>
-                            <p className="text-gray-600">Aug 18</p>
+                            <p className="text-gray-900 leading-none">{author.name}</p>
+                            <p className="text-gray-600">{author.date}</p>
                         </div>
                     </div>)
                 }

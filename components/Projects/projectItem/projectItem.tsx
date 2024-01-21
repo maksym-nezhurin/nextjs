@@ -3,6 +3,7 @@ import {IProject} from "@/constants/projects";
 import { motion } from "framer-motion";
 import {Rating} from "@/components/rating/rating";
 
+// eslint-disable-next-line
 export const ProjectRowItem = motion (forwardRef((props: IProject, ref: ForwardedRef<HTMLDivElement>): ReactElement => {
     const { name, company, duration, finishedAt, className } = props;
 

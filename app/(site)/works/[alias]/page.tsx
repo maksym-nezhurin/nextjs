@@ -1,12 +1,7 @@
-import React, { ReactElement } from 'react';
-import { Metadata } from 'next';
+import { ReactElement } from 'react';
 import { notFound } from 'next/navigation';
 
 import './page.css';
-
-export const metadata: Metadata = {
-	title: 'Page -- '
-}
 
 enum WORKS_PAGES {
 	'big-data',
@@ -43,6 +38,14 @@ const getPage = async (alias: string): Promise<A> => {
 		})
 	}, 3000))
 	return WORKS_DATA[WORKS_PAGES[alias]];
+}
+
+export async function generateMetadata({ params }: { params: { alias }}) {
+	const page = await getPage(params.alias);
+
+	return {
+		title: `meta -- ${page.title} -- ${params.alias}`
+	}
 }
 
 export default async function PageWorks({ params }: { params: { alias: string } }): Promise<ReactElement> {

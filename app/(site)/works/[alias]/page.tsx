@@ -36,12 +36,12 @@ const getPage = async (alias: string): Promise<A> => {
 		return res({
 
 		})
-	}, 3000))
+	}, 1000))
 	return WORKS_DATA[WORKS_PAGES[alias]];
 }
 
 export async function generateMetadata({ params }: { params: { alias }}) {
-	const page = await getPage(params.alias);
+	const page = await getPage(params.alias); // Will be just one request (redublication)
 
 	return {
 		title: `meta -- ${page.title} -- ${params.alias}`
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: { params: { alias }}) {
 }
 
 export default async function PageWorks({ params }: { params: { alias: string } }): Promise<ReactElement> {
-	const page = await getPage(params.alias);
+	const page = await getPage(params.alias); // Will be just one request (redublication)
 
 	if (!page) {
 		notFound();

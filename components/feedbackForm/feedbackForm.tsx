@@ -54,15 +54,6 @@ export const FeedbackForm = (props: FeedbackFormProps) => {
                     tabIndex={isOpened ? 0 : -1}
                     aria-invalid={!!errors.title}
                 />
-                <Textarea
-                    {...register('description', { required: { value: true, message: 'Fill the text' } })}
-                    placeholder='Feedback text'
-                    className={styles.description}
-                    error={errors.description}
-                    tabIndex={isOpened ? 0 : -1}
-                    aria-label='Feedback text'
-                    aria-invalid={!!errors.description}
-                />
                 <div className={styles.rating}>
                     <span>Rating:</span>
                     <Controller
@@ -81,6 +72,15 @@ export const FeedbackForm = (props: FeedbackFormProps) => {
                         )}
                     />
                 </div>
+                <Textarea
+                    {...register('description', { required: { value: true, message: 'Fill the text' } })}
+                    placeholder='Feedback text'
+                    className={styles.description}
+                    error={errors.description}
+                    tabIndex={isOpened ? 0 : -1}
+                    aria-label='Feedback text'
+                    aria-invalid={!!errors.description}
+                />
                 <div className={styles.submit}>
                     <ButtonIcon icon={"done"} className="text-center" appearance="white" type={'submit'} tabIndex={isOpened ? 0 : -1} onClick={() => clearErrors()} text={'Submit'}/>
                     <br/>

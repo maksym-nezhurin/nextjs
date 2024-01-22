@@ -31,6 +31,7 @@ export const AnimatedTubes = (): ReactElement => {
     ];
     const [selectedId, setSelectedId] = useState<string | null>(null);
     const [item, setItem] = useState<Item | null>(null)
+
     useEffect(() => {
         const item = items.find(item => item.id === selectedId);
         item && setItem(item);

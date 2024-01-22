@@ -4,6 +4,7 @@
     gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 6rem 2rem;
+    min-height: 10rem;
 }
 
 .animatedItem {

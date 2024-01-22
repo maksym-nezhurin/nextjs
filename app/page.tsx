@@ -2,9 +2,9 @@ import Image from 'next/image'
 import { Metadata } from 'next';
 import {FULL_NAME} from "@/constants/contacts";
 import {FeedbackForm} from "@/components/feedbackForm/feedbackForm";
+import {HTag} from "@/components";
 
 import './page.css'
-import {AnimatedTubes} from "@/components/animatedTubes/animatedTubes";
 
 export const metadata: Metadata = {
 	title: `Personal portfolio site - ${FULL_NAME}`
@@ -17,17 +17,15 @@ export default function Home() {
               <Image
                   className="relative self-center dark:drop-shadow-[0_0_0.3rem_#ffffff70] " // dark:invert
                   src="/images/avatar.png"
-                  alt="Next.js Logo"
+                  alt="Avatar Logo"
                   width={400}
                   height={100}
                   priority
               />
           </div>
 
-          <AnimatedTubes />
-
           <div className={'formWrapper'}>
-              <h3 style={{ alignSelf: 'center' }}>Please, send me your feedback</h3>
+              <HTag tag={"h3"} className="wow">Please, send me your feedback</HTag>
               <div className="formInnerWrapper">
                   <FeedbackForm className="feedbackForm" isOpened={true} />
               </div>

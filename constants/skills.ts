@@ -21,6 +21,10 @@ export type SkillName =
     | 'NextJS'
     | 'NestJS';
 
+export type AdditionalSkillNames =
+    'Zeplin'
+    | 'Figma';
+
 export interface ISkill {
     id: number | string,
     name?: SkillName,

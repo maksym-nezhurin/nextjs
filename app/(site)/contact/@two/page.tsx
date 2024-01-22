@@ -1,6 +1,6 @@
 import {socialList, workNetworkList} from "@/constants/contacts";
 import {JSX} from "react";
-import cn from 'classname';
+import cn from "classnames";
 
 import styles from './page.module.css';
 

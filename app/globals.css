@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
   --primary: #7653FC;
   --yellow: #f1b23f;
-  --red: rgb(232, 28, 86);
+  --red: rgb(232 28 86);
   --black: #3B434E;
   --gray-light: #EBEBEB;
   --gray: #A4A4A4;
@@ -44,28 +44,31 @@ h2 {
 }
 
 h3 {
-  font-size: 1.75rem;
   text-align: center;
+
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 1.25rem;
   text-align: center;
+
+  font-size: 1.25rem;
 }
 
 h2, h3, h4 {
   padding: 0.75rem 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (width <= 600px) {
   h2, h3, h4 {
     font-size: 1.25rem;
   }
 }
 
 .innerContainer {
-  padding: 1.5rem;
+  flex: 1;
+
   width: 100%;
   margin-top: 1rem;
-  flex: 1;
+  padding: 1.5rem;
 }

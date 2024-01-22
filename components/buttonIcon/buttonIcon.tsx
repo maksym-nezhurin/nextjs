@@ -1,5 +1,5 @@
 import {ButtonHTMLAttributes, DetailedHTMLProps, ReactElement} from "react";
-import cn from 'classname';
+import cn from 'classnames';
 
 import facebook from '../../public/icons/svg/facebook.svg';
 import linkedin from '../../public/icons/svg/linkedin.svg';

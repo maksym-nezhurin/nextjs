@@ -3,8 +3,8 @@
 }
 
 .nav li {
-    padding: 0.5rem;
     margin: 0 0.5rem;
+    padding: 0.5rem;
 }
 
 .text-left {
@@ -13,13 +13,14 @@
 
 .infoBlock {
     display: flex;
+    align-items: inherit;
     flex-direction: column-reverse;
     justify-content: end;
-    align-items: inherit;
 }
 
 .formWrapper {
     display: grid;
+
     text-align: center;
     grid-template-rows: 1fr 2fr;
 }

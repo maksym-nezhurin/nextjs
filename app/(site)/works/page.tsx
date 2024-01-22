@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { Metadata } from 'next';
 import Link from "next/link";
 import { Projects } from "@/components/Projects/projects";
@@ -32,6 +32,7 @@ const WORKS_DATA: Record<WORKS_PAGES, IWorkData> = {
 type A = Awaited<Promise<IWorkData>>;
 
 export default async function PageWorks() {
+const a = 2;
 
 	return (
 		<div className='works-page'>
@@ -54,6 +55,7 @@ export default async function PageWorks() {
 
 			<div>
 				<h4>Projects:</h4>
+				{a}
 				<Projects projects={projectsItems} />
 			</div>
 		</div>

@@ -3,8 +3,9 @@
 }
 
 .projectHeaderRow > div {
-    padding: 1rem 1.5rem;
     flex-grow: 1;
+
+    padding: 1rem 1.5rem;
 }
 
 .projectRow {

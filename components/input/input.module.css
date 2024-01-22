@@ -1,5 +1,6 @@
 .input {
 	padding: 7px 15px;
+
 	color: var(--black);
 	border: none;
 	border-radius: 5px;
@@ -29,6 +30,8 @@
 	position: absolute;
 	bottom: -20px;
 	left: 0;
-	font-size: 0.75rem;
+
 	color: var(--red);
+
+	font-size: 0.75rem;
 }

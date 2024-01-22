@@ -1,11 +1,12 @@
 .cardItem {
-    min-height: 9.5rem;
     width: 100%;
+    min-height: 9.5rem;
 }
 
 .cardItem__image {
     height: auto;
-    background-size: cover;
+
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
+    background-size: cover;
 }

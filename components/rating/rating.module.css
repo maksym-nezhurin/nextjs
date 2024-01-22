@@ -4,6 +4,7 @@
 
 .star {
     display: inline-block;
+
     min-width: 20px;
 }
 
@@ -27,6 +28,8 @@
     position: absolute;
     bottom: -20px;
     left: 0;
+
     color: var(--red);
+
     font-size: 0.75rem;
 }

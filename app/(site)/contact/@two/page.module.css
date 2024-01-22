@@ -5,15 +5,18 @@
 
 .wrapperLeft {
     align-self: center;
+
     padding: 1.5rem;
 }
 
 .leftWrapper {
     align-self: center;
 }
+
 .mediaItemsWrapper {
     display: grid;
     grid-template-columns: repeat(3, 50px);
+
     align-items: center;
     justify-content: center;
 }

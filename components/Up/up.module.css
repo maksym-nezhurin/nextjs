@@ -1,20 +1,25 @@
 .up {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 2.5rem;
     height: 2.5rem;
-    /*background: var(--tw-text-opacity);*/
-    box-shadow: 0 4px 4px rgba(0,0,0,0.05);
-    transition: box-shadow ease-in 0.25s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+
     cursor: pointer;
+    transition: box-shadow ease-in 0.25s;
+
     border: none;
+    border-radius: 10px;
+
+    /* background: var(--tw-text-opacity); */
+    box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
 }
 
 .up:hover {
-    box-shadow: 0 -4px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 -4px 4px rgb(0 0 0 / 5%);
 }

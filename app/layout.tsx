@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Navigation } from "@/components/navigation/navigation";
 import { Up } from "@/components/Up/up";
-import cn from 'classname';
+import cn from 'classnames';
 
 import './page.css';
 import './globals.css'

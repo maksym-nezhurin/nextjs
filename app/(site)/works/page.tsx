@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Link from "next/link";
 import { Projects } from "@/components/Projects/projects";
 import { projectsItems } from "@/constants/projects";
+import {HTag} from "@/components";
 
 export const metadata: Metadata = {
 	title: 'Page -- Works'
@@ -32,8 +33,6 @@ const WORKS_DATA: Record<WORKS_PAGES, IWorkData> = {
 type A = Awaited<Promise<IWorkData>>;
 
 export default async function PageWorks() {
-const a = 2;
-
 	return (
 		<div className='works-page'>
 			<ul>
@@ -54,8 +53,7 @@ const a = 2;
 			</ul>
 
 			<div>
-				<h4>Projects:</h4>
-				{a}
+				<HTag tag={'h2'}>Projects:</HTag>
 				<Projects projects={projectsItems} />
 			</div>
 		</div>

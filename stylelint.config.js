@@ -1,11 +1,8 @@
 module.exports = {
     "extends": [
-        'stylelint-config-standard',
-        'stylelint-order-config-standard'
+        'stylelint-config-standard'
     ],
-    "plugins": [
-        "stylelint-order"
-    ],
+    "plugins": [],
     "rules": {
         "indentation": [
             "tab"

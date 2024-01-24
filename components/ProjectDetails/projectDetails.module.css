@@ -1,0 +1,41 @@
+.projectDetails {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: 2rem 0;
+    padding: 2rem;
+    display: grid;
+    gap: 15px;
+    min-height: 100%;
+    grid-template-rows: 1fr auto 100px 50px;
+    grid-template-columns: [start] minmax(100px, auto) [logoend] 1fr [nameEnd] auto [end];
+}
+
+.backgroundImage {
+    grid-column: start / end;
+}
+
+.logo {
+    grid-column: start / logoend;
+}
+
+.name {
+    grid-column: logoend / nameEnd;
+    text-align: center;
+}
+
+.finishedAt {
+    grid-column: nameEnd / end;
+}
+
+.description {
+    grid-column: start / nameEnd;
+}
+
+.company {
+    grid-column: nameEnd / end;
+}
+
+.rating {
+    text-align: center;
+    grid-column: logoend / nameEnd;
+}

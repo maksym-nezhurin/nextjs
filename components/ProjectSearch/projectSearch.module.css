@@ -1,0 +1,31 @@
+.searchModule {
+    margin: 4rem 0;
+}
+
+.searchModuleInner {
+    background-color: var(--green-light);
+    margin: auto;
+    padding: 1rem;
+    max-width: 400px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: center;
+    align-content: center;
+}
+
+.searchWrapper {
+    display: grid;
+    grid-template-columns: 195px 50px;
+}
+
+.searchButton {
+
+}
+
+.searchInput {
+
+}

@@ -44,12 +44,12 @@ const getPage = async (alias: string): Promise<A> => {
 export async function generateMetadata({ params }: { params: { alias }}): Promise<Metadata> {
 	const page = await getPage(params.alias); // Will be just one request (redublication)
 
-	return {
+	return page ? {
 		title: `meta -- ${page.title} -- ${params.alias}`,
 		icons: {
 			icon: '/man.ico'
 		}
-	}
+	} : {}
 }
 
 export default async function PageWorks({ params }: { params: { alias: string } }): Promise<ReactElement> {

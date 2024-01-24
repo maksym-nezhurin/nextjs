@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 	title: `Personal portfolio site - ${FULL_NAME}`
 }
 
+// App Router
+
 export default function Home() {
   return (
       <>

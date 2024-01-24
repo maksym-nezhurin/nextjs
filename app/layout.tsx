@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   description: 'My personal web site as a senior web developer',
 }
 
+// App router implementation
+
 export default function RootLayout({
   children,
 }: {

@@ -11,7 +11,7 @@ import {useForm} from "react-hook-form";
 import {useRouter} from "next/navigation";
 
 export const ProjectSearch = (): ReactElement => {
-    const { register, control, handleSubmit, formState: { errors }, reset, clearErrors } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const [item, setItem] = useState<IProject | undefined>(undefined);
     const router = useRouter();
 
@@ -39,6 +39,7 @@ export const ProjectSearch = (): ReactElement => {
                     {...register('search', { required: true })}
                     className={styles.searchInput}
                     placeholder={'Search'}
+                    aria-invalid={!!errors.search}
                 />
                 <ButtonIcon type={'submit'} className={styles.searchButton} icon={'search'} appearance={"white"} />
             </form>

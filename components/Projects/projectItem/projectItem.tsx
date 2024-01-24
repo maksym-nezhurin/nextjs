@@ -1,4 +1,4 @@
-import {ForwardedRef, forwardRef, ReactElement} from 'react';
+import React, {ForwardedRef, forwardRef, ReactElement} from 'react';
 import {IProject} from "@/constants/projects";
 import { motion } from "framer-motion";
 import {Rating} from "@/components/rating/rating";

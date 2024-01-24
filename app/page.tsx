@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Metadata } from 'next';
 import {FULL_NAME} from "@/constants/contacts";
 import {FeedbackForm} from "@/components/feedbackForm/feedbackForm";
+import {ProjectSearch} from "@/components/ProjectSearch/projectSearch";
 import {HTag} from "@/components";
 
 import './page.css'
@@ -25,6 +26,8 @@ export default function Home() {
                   priority
               />
           </div>
+
+          <ProjectSearch />
 
           <div className={'formWrapper'}>
               <HTag tag={"h3"} className="wow">Please, send me your feedback</HTag>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from "next/link";
 import { Projects } from "@/components/Projects/projects";
-import { projectsItems } from "@/constants/projects";
 import {HTag} from "@/components";
 
 export const metadata: Metadata = {
@@ -54,7 +53,7 @@ export default async function PageWorks() {
 
 			<div>
 				<HTag tag={'h2'}>Projects:</HTag>
-				<Projects projects={projectsItems} />
+				<Projects />
 			</div>
 		</div>
 	)

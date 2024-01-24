@@ -13,6 +13,7 @@ export interface IProject {
     duration: number,
     className?: string,
     site?: string,
+    url?: string,
     finishedAt: string | number
 }
 

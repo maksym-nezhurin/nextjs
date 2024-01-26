@@ -21,6 +21,7 @@ export const FeedbackForm = (props: FeedbackFormProps) => {
     const onSubmit = async (formData: IFeedbackForm) => {
         try {
             console.log(formData)
+
             // const { data } = await axios.post<IFeedbackSentResponse>(API.review.createDemo, { ...formData, productId });
             const data = { message: 'Success'};
             if (data.message) {

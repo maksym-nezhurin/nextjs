@@ -9,6 +9,7 @@ import styles from './projectSearch.module.css';
 import {ButtonIcon} from "@/components/buttonIcon/buttonIcon";
 import {useForm} from "react-hook-form";
 import {useRouter} from "next/navigation";
+import {Route} from "next";
 
 export const ProjectSearch = (): ReactElement => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -21,7 +22,7 @@ export const ProjectSearch = (): ReactElement => {
         })
         setItem(item);
         item && setTimeout(() => {
-            router.push(`works/${item?.id}`)
+            router.push(`works/${item?.id}` as Route)
         }, 500)
     }
 

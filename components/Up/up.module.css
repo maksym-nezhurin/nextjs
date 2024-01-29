@@ -15,11 +15,15 @@
 
     border: none;
     border-radius: 10px;
-
-    /* background: var(--tw-text-opacity); */
     box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
 }
 
 .up:hover {
     box-shadow: 0 -4px 4px rgb(0 0 0 / 5%);
+}
+
+@media (prefers-color-scheme: dark) {
+    .up {
+        background: white;
+    }
 }

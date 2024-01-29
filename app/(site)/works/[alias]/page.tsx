@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import { notFound } from 'next/navigation';
+import {Metadata} from "next";
 
 import './page.css';
 
@@ -40,11 +41,14 @@ const getPage = async (alias: string): Promise<A> => {
 	return WORKS_DATA[WORKS_PAGES[alias]];
 }
 
-export async function generateMetadata({ params }: { params: { alias }}) {
+export async function generateMetadata({ params }: { params: { alias }}): Promise<Metadata> {
 	const page = await getPage(params.alias); // Will be just one request (redublication)
 
 	return {
-		title: `meta -- ${page.title} -- ${params.alias}`
+		title: `meta -- ${page.title} -- ${params.alias}`,
+		icons: {
+			icon: '/man.ico'
+		}
 	}
 }
 

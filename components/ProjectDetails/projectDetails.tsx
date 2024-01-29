@@ -14,7 +14,9 @@ export const ProjectDetails = (props: { project: IProject }): ReactElement => {
         <div className={styles.backgroundImage}><h4>[Bid image example]</h4></div>
         <div className={styles.logo}>{ url && <Image src={process.env.NEXT_PUBLIC_DOMAIN + url} alt={'text'} />} some logo of the project</div>
         <div className={styles.name}>{
-            site ? <Link href={site}
+            site ? <Link href={{
+                    pathname: site
+                }}
                          target={'_blank'}
                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"><span>{name}</span></Link>
                 : <span>{name}</span>

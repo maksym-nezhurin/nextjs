@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Suspense} from "react";
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Navigation } from "@/components/navigation/navigation";
@@ -29,14 +29,18 @@ export default function RootLayout({
                     Code is in my mind....&nbsp;
                 </p>
                 <div
-                    className={cn('fixed bottom-0 left-0 h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none',
-                        'infoBlock')}>
+                    className={cn(
+                        'fixed bottom-0 left-0 h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none',
+                        'infoBlock px-2'
+                    )}>
                     <p>Maksym Nezhurin (Senior Software Engineer)</p>
                     <p>Personal Blog</p>
                 </div>
             </div>
 
-            <Navigation/>
+            <Suspense fallback={null}>
+                <Navigation/>
+            </Suspense>
 
             <div className="innerContainer lg:border lg:rounded-xl">{children}</div>
 

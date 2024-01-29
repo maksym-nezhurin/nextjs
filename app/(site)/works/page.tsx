@@ -38,14 +38,18 @@ export default async function PageWorks() {
 			<ul>
 				<li>
 					<Link
-						href={"works/big-data"}
+						href={{
+							pathname: "works/big-data"
+						}}
 					>
 						<span>Big data</span>
 					</Link>
 				</li>
 				<li>
 					<Link
-						href={"works/data-science"}
+						href={{
+							pathname: "works/data-science"
+						}}
 					>
 						<span>Data Science</span>
 					</Link>

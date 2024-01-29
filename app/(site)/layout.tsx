@@ -6,8 +6,6 @@ export default function SiteLayout({
   children: React.ReactNode
 }) {
   return (
-    <div>
-        {children}
-    </div>
+    <div>{children}</div>
   )
 }

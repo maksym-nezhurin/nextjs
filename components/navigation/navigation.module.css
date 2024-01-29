@@ -1,0 +1,5 @@
+.active {
+    color: #A4A4A4;
+    cursor: default;
+    @apply border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/30
+}

@@ -16,7 +16,9 @@ export const ProjectRowItem = motion (forwardRef((props: IProject, ref: Forwarde
         <div className="px-6 py-4 flex-grow"><Rating isEditable={false} error={null} rating={5} /></div>
         <div className="px-6 py-4 flex-grow">
             <Link
-                href={`works/${id}`}
+                href={{
+                    pathname: `works/${id}`
+                }}
                 className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
             >
                 <span>Details</span>

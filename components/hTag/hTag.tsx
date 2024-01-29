@@ -3,8 +3,17 @@ import {ReactElement} from "react";
 import styles from './hTag.module.css'
 import cn from "classnames";
 
+enum SIZES {
+        h1,
+        h2,
+        h3,
+        h4,
+}
+
+type TagSizes = keyof typeof SIZES;
+
 interface hTagProps {
-    tag: string,
+    tag: TagSizes,
     children?: ReactElement | string,
     className?: string,
     style?: object,

@@ -1,6 +1,6 @@
 import {IMenuItem} from "@/interfaces/menuItem";
 
-export const MenuItems: IMenuItem[] = [
+export const MenuItems: IMenuItem<string>[] = [
     {
         id: 1,
         path: '/',

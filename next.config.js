@@ -24,7 +24,10 @@ const nextConfig = {
 
         return config;
     },
-    images: { unoptimized: true }
+    images: { unoptimized: true },
+    experimental: {
+        typedRoutes: true,
+    }
 }
 
 module.exports = nextConfig

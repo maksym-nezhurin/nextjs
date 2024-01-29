@@ -1,5 +1,4 @@
 import {Metadata} from "next";
-import {AnimatedTubes} from "@/components/animatedTubes/animatedTubes";
 
 export const metadata: Metadata = {
     title: 'Page -- experience'

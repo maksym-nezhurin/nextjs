@@ -17,6 +17,7 @@ export interface IProject {
     className?: string,
     site?: string,
     nda: boolean,
+    url?: string,
     finishedAt: string | number
 }
 

@@ -1,21 +1,17 @@
 'use client'
 
-import {IProject} from "@/constants/projects";
 import {ReactElement, useReducer} from "react";
 import { ProjectRowItem } from "@/components/Projects/projectItem/projectItem";
 import {sortReducer, SortReducerState} from "@/components/skillList/sort.reducer";
+import { projectsItems } from "@/constants/projects";
 import {SortEnum} from "@/components/sort/sort.props";
 
 import styles from './projects.module.css';
 import cn from "classnames";
 
-interface IProjectsProps {
-    projects: IProject[]
-}
-
-export const Projects = (props: IProjectsProps): ReactElement => {
+export const Projects = (): ReactElement => {
     const initialState: SortReducerState = {
-        projects: props.projects,
+        projects: projectsItems,
         sort: SortEnum.name,
     };
     const [{projects, sort}, dispatch] = useReducer(sortReducer, initialState);

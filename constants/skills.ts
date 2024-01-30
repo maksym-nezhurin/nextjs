@@ -19,6 +19,7 @@ export type SkillName =
     | 'HTML'
     | 'PhaserJS'
     | 'NextJS'
+    | 'NuxtJS'
     | 'NestJS';
 
 export type AdditionalSkillNames =
@@ -111,6 +112,12 @@ export const SKILLS: Record<SkillName, ISkill> = {
         status: SkillStatus.incompetence,
         description: 'TypeScript-based open-source framework for building web applications, developed and maintained by Google.',
         years: 0
+    },
+    NuxtJS: {
+        id: 14,
+        status: SkillStatus.progress,
+        description: 'The Intuitive Vue Framework. Nuxt is an open source framework that makes web development intuitive and powerful.',
+        years: 0.1
     },
     Vue: {
         id: 13,

@@ -91,6 +91,13 @@ export const Technologies: Record<SkillName, ITechnology> = {
         },
         description: 'Nest',
     },
+    NuxtJS: {
+        image: {
+            src: 'images/nuxt.png',
+            title: 'Nuxt'
+        },
+        description: 'Nuxt',
+    },
     Angular: {
         image: {
             src: 'images/angular.png',

@@ -1,12 +1,33 @@
 .wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 0.75fr 1fr 1fr 1fr;
+    gap: 15px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "title title title title"
+    "empty empty socTitle workMediaTitle"
+    "slogan slogan soc-icons work-icons";
+}
+
+.title {
+    grid-area: title;
 }
 
 .wrapperLeft {
     align-self: center;
 
     padding: 1.5rem;
+    grid-area: empty;
+}
+
+.socialTitle {
+    grid-area: socTitle;
+}
+.workMediaTitle {
+    grid-area: workMediaTitle;
+}
+.slogan {
+    grid-area: slogan;
 }
 
 .leftWrapper {
@@ -19,6 +40,13 @@
 
     align-items: center;
     justify-content: center;
+}
+
+.socialIcons {
+    grid-area: soc-icons;
+}
+.workIcons {
+    grid-area: work-icons;
 }
 
 .mediaItem {

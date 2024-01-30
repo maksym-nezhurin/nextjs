@@ -3,6 +3,7 @@ import {LinkedinIcon} from "@/app/icons/linkedIn";
 import {InstagramIcon} from "@/app/icons/instagram";
 import {FacebookIcon} from "@/app/icons/facebook";
 import {GithubIcon} from "@/app/icons/github";
+import {GitlabIcon} from "@/app/icons/gitlab";
 import {UpworkIcon} from "@/app/icons/upwork";
 
 const NAME: string = 'Maksym';
@@ -27,7 +28,7 @@ export const socialList: Record<SocialNetworkItemName, ISocialMediaItem> = {
     FaceBook: {
         id: 4,
         label: "FaceBook",
-        url: 'https://www.facebook.com/',
+        url: 'https://www.facebook.com/mnezhurin',
         icon: FacebookIcon
     }
 };
@@ -38,6 +39,12 @@ export const workNetworkList: Record<WorkNetworkItemName, ISocialMediaItem> = {
         label: 'GitHub',
         url: 'https://github.com/maksym-nezhurin',
         icon: GithubIcon
+    },
+    GitLab: {
+        id: 2,
+        label: 'GitLab',
+        url: 'https://gitlab.com/mnezhurin',
+        icon: GitlabIcon
     },
     Upwork: {
         id: 4,

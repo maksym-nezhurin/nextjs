@@ -6,6 +6,7 @@ import {GitHubProjects} from "@/components/GitHubProjects";
 import {HTag} from "@/components";
 
 import './page.css'
+import {AboutMe} from "@/components/aboutMe/aboutMe";
 
 export const metadata: Metadata = {
 	title: `Personal portfolio site - ${FULL_NAME}`
@@ -25,10 +26,13 @@ export default function Home() {
               />
           </div>
 
+          <AboutMe />
+
           <GitHubProjects />
 
           <div className={'formWrapper'}>
               <HTag tag={"h3"}>Please, send me your feedback</HTag>
+              <p>And the time when we had cooperation.</p>
 
               <div className="formInnerWrapper">
                   <FeedbackForm className="feedbackForm" isOpened={true} />

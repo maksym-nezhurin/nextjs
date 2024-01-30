@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
+const withMDX = require('@next/mdx')()
+
 const nextConfig = {
-    webpack(config, options) {
+    webpack(config) {
         config.module.rules.push({
             loader: '@svgr/webpack',
             issuer: /\.(js|ts)x?$/,
@@ -24,10 +26,11 @@ const nextConfig = {
 
         return config;
     },
+    pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
     images: { unoptimized: true },
     experimental: {
         typedRoutes: true,
     }
 }
 
-module.exports = nextConfig
+module.exports = withMDX(nextConfig)

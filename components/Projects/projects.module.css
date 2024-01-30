@@ -10,7 +10,7 @@
 
 .projectRow {
     display: grid;
-    grid-template-columns: 12rem repeat(5, 1fr);
+    grid-template-columns: 1.2fr repeat(3, 0.6fr) 10rem 1fr;
 }
 
 .projectTitle {

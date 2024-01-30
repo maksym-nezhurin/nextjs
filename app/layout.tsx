@@ -1,5 +1,6 @@
 import React, {Suspense} from "react";
 import type { Metadata } from 'next'
+import {FULL_NAME} from "@/constants/contacts";
 import { Inter } from 'next/font/google'
 import { Navigation } from "@/components/navigation/navigation";
 import { Up } from "@/components/Up/up";
@@ -33,7 +34,7 @@ export default function RootLayout({
                         'fixed bottom-0 left-0 h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none',
                         'infoBlock px-2'
                     )}>
-                    <p>Maksym Nezhurin (Senior Software Engineer)</p>
+                    <p>{FULL_NAME} (Senior Software Engineer)</p>
                     <p>Personal Blog</p>
                 </div>
             </div>

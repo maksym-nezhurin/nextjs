@@ -19,7 +19,7 @@ export const GitHubProjects = () => {
 
     return (
         <div className="p-12">
-            <HTag tag='h3' className="p-8">GitHub projects:</HTag>
+            <HTag tag='h3' className="p-8">My own GitHub projects:</HTag>
             <ul className="grid grid-cols-1 gap-4">
                 {
                     repos.map(({ id, name, description, stargazers_count, html_url }) => {

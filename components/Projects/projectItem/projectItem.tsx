@@ -3,12 +3,16 @@ import {IProject} from "@/constants/projects";
 import { motion } from "framer-motion";
 import {Rating} from "@/components/rating/rating";
 
+const UnderNda = (props) => {
+    return <span className='font-mono'>Under NDA ({props.company} company)</span>
+}
+
 // eslint-disable-next-line
 export const ProjectRowItem = motion (forwardRef((props: IProject, ref: ForwardedRef<HTMLDivElement>): ReactElement => {
-    const { name, company, duration, finishedAt, className } = props;
+    const { name, nda = false, company, duration, finishedAt, className } = props;
 
     return <div ref={ref} className={`${className} flex justify-around bg-white border-b dark:bg-gray-800 dark:border-gray-700`}>
-        <div className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{name}</div>
+        <div className="px-6 py-4 font-medium whitespace-nowrap text-gray-900 dark:text-white">{nda ? <UnderNda company={company}/> : name}</div>
         <div className="px-6 py-4 flex-grow">{company}</div>
         <div className="px-6 py-4 flex-grow">{duration}</div>
         <div className="px-6 py-4 flex-grow" >{finishedAt}</div>

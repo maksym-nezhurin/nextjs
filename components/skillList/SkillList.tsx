@@ -1,9 +1,11 @@
 import React from "react";
 import { ISkill } from "@/constants/skills";
-
-import styles from './skillList.module.css';
 import {Card} from "@/components/card/card";
 import {Technologies} from "@/constants/technologies";
+
+import styles from './skillList.module.css';
+import {HTag} from "@/components";
+import cn from "classnames";
 
 interface ISkillsByExperience {
     expert: ISkill[],
@@ -48,7 +50,7 @@ export const SkillList = (props) => {
 
     const renderSkillByExperience = (label, skills: ISkill[]) => {
         return <>
-            <h4 className={styles.skillLevelLabel}>{label}</h4>
+            <HTag tag='h4' className={cn(styles.skillLevelLabel, 'text-left')}>{label}</HTag>
             <div className={styles.skill__items}>
                 {
                     skills.map((skill: ISkill) => <div key={skill.id} >
@@ -58,6 +60,7 @@ export const SkillList = (props) => {
             </div>
         </>
     };
+
 
     return (<div className={styles.skillList}>
         {renderSkillByExperience('I am expert in:', skillsByExperience.expert)}

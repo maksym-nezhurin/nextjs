@@ -4,6 +4,8 @@ enum ProjectStatus {
     new
 }
 
+type Country = 'US' | 'Australia' | 'Canada' | 'United Kingdom' | 'Germany' | 'Ukraine' | 'Russia' | 'Romania' | 'Belgium';
+
 export interface IProject {
     id: number | string,
     status: keyof typeof ProjectStatus,
@@ -11,69 +13,190 @@ export interface IProject {
     description?: string,
     company: string,
     duration: number,
+    country: Country,
     className?: string,
     site?: string,
+    nda: boolean,
     finishedAt: string | number
 }
 
 export const projectsItems:IProject[]  = [
     {
-        id: 1,
+        id: 15,
         status: "finished",
         name: 'WeWork',
         company: 'SoftServe',
-        duration: 3,
-        description: 'International coworking company',
-        finishedAt: '2024'
+        country: "US",
+        duration: 36,
+        description: 'International coworking company with a lot of branches and offices around a world',
+        finishedAt: '2024',
+        nda: true
         // finishedAt: new Date('December 31, 2024')
     },
     {
-        id: 2,
+        id: 14,
         status: "finished",
         name: 'Iris',
         company: 'CodeIt',
-        duration: 0.5,
+        country: 'Canada',
+        duration: 4,
         description: 'Financial Canadian company',
-        finishedAt: 2020
+        nda: true,
+        finishedAt: 2021
     },
     {
-        id: 4,
+        id: 13,
         status: "finished",
         name: 'AHub',
         company: 'CodeIt',
-        duration: 0.8,
+        country: 'US',
+        duration: 2,
         site: 'https://ahub.com/',
         description: 'Agricultural american company. Was working on the home page',
+        nda: false,
         finishedAt: 2020
     },
     {
-        id: 5,
+        id: 12,
         status: "finished",
         name: 'SweetRush',
         company: 'CodeIt',
-        duration: 0.4,
+        country: 'US',
+        duration: 8,
         site: 'https://www.sweetrush.com/',
         description: 'Took a part in creating projects for physics, history, and mathematics lessons, written with React, Redux, and PhaserJS technologies as a coworker',
+        nda: true,
         finishedAt: 2020
+    },
+    {
+        id: 11,
+        status: "finished",
+        name: 'Casino (CardsChat)',
+        company: 'CodeIt',
+        country: 'United Kingdom',
+        duration: 12,
+        site: 'https://www.cardschat.com/',
+        description: 'Casino forum project',
+        nda: true,
+        finishedAt: 2019
+    },
+    {
+        id: 10,
+        status: "finished",
+        name: 'Music Lessons',
+        country: 'US',
+        company: 'Upwork',
+        duration: 18,
+        description: 'Musical lessons for the students fron Carter Dewberry',
+        site: 'https://carterdewberry.bandcamp.com/',
+        nda: true,
+        finishedAt: 2021
+    },
+    {
+        id: 9,
+        status: "finished",
+        name: 'InvestFast/Connexian',
+        company: 'InvestFast',
+        duration: 9,
+        country: 'Australia',
+        description: 'The Australian technology platform for direct investing to the funds market',
+        site: 'https://www.connexian.com/',
+        nda: false,
+        finishedAt: 2019
+    },
+    {
+        id: 8,
+        status: "finished",
+        name: 'Javascript Widget (Bot)',
+        company: 'Upwork',
+        duration: 4,
+        country: 'United Kingdom',
+        description: 'Front end developer needed for improvements on Javascript Widget',
+        site: 'https://www.livechat.com/',
+        nda: false,
+        finishedAt: 2019
+    },
+    {
+        id: 7,
+        status: "finished",
+        name: 'Travel site',
+        company: 'Upwork',
+        duration: 2,
+        country: 'Romania',
+        description: 'Travel website',
+        site: 'https://www.livechat.com/',
+        nda: false,
+        finishedAt: 2018
     },
     {
         id: 6,
         status: "finished",
-        name: 'Casino (CardsChat)',
-        company: 'CodeIt',
-        duration: 1,
-        site: 'https://www.cardschat.com/',
-        description: 'Casino forum project',
+        name: 'Tante Minna',
+        company: 'Upwork',
+        duration: 2,
+        country: 'Germany',
+        description: 'Implement landing page regarding all users wishes',
+        site: 'https://www.tante-minna.de',
+        nda: false,
         finishedAt: 2019
+    },
+    {
+        id: 5,
+        status: "finished",
+        name: 'PSD to HTML (LayerSlider)',
+        company: 'Signalstark',
+        duration: 10,
+        country: 'Germany',
+        description: 'A lot of small sites was converted from PSD to HTML for my good client Philipp Tauscher',
+        site: 'signalstark.com',
+        nda: false,
+        finishedAt: 2018
+    },
+    {
+        id: 4,
+        status: "finished",
+        name: 'Prediction AI',
+        company: 'Greenlamp (Scott Shep)',
+        duration: 3,
+        country: 'US',
+        description: 'Created small lottery functionality, that provide random combination of values',
+        nda: false,
+        finishedAt: 2018
     },
     {
         id: 3,
         status: "finished",
-        name: 'Music Lessons',
+        name: 'HTML CSS Bootstrap',
         company: 'Upwork',
         duration: 2,
-        description: 'Musical lessons for the students fron Carter Dewberry',
-        site: 'https://carterdewberry.bandcamp.com/',
-        finishedAt: 2021
+        country: 'Belgium',
+        description: 'PSD to HTML website',
+        site: 'AltoChange.com',
+        nda: false,
+        finishedAt: 2017
     },
+    {
+        id: 2,
+        status: "finished",
+        name: 'Logiforms, Prince PDF',
+        company: 'Upwork',
+        duration: 10,
+        country: 'Australia',
+        description: 'The lawyer from Australia, we had a lot of small projects related to the law documentation',
+        site: 'https://app.logiforms.com/',
+        nda: false,
+        finishedAt: 2017
+    },
+    {
+        id: 1,
+        status: "finished",
+        name: 'Snipbo',
+        company: 'Snipbo',
+        duration: 10,
+        country: 'US',
+        description: 'Social media platform for American users. The main idea of the client was to gather all possibilities provided the similar sites as YouTube, Facebook and twitter.Social media platform for American users. The main idea of the client was to gather all possibilities provided the similar sites as YouTube, Facebook and twitter.',
+        site: 'https://www.snipbo.com/',
+        nda: false,
+        finishedAt: 2016
+    }
 ]

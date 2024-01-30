@@ -35,27 +35,6 @@ type A = Awaited<Promise<IWorkData>>;
 export default async function PageWorks() {
 	return (
 		<div className='works-page'>
-			<ul>
-				<li>
-					<Link
-						href={{
-							pathname: "works/big-data"
-						}}
-					>
-						<span>Big data</span>
-					</Link>
-				</li>
-				<li>
-					<Link
-						href={{
-							pathname: "works/data-science"
-						}}
-					>
-						<span>Data Science</span>
-					</Link>
-				</li>
-			</ul>
-
 			<div>
 				<HTag tag={'h2'}>Projects:</HTag>
 				<Projects projects={projectsItems} />

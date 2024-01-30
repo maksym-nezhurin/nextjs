@@ -93,23 +93,11 @@ export const FeedbackForm = (props: FeedbackFormProps) => {
                 <div>
                     Thanks, your feedback will be published after checking
                 </div>
-                <button
-                    onClick={() => setIsSuccess(false)}
-                    className={styles.close}
-                    aria-label="close"
-                >
-                    Close
-                </button>
+                <ButtonIcon icon={"done"} className={styles.close} appearance="white" onClick={() => setIsSuccess(false)} text='' />
             </div>}
             {error && <div className={cn(styles.error, styles.panel)} role="alert">
                 Something was wrong
-                <button
-                    onClick={() => setError(undefined)}
-                    className={styles.close}
-                    aria-label="close"
-                >
-                    Close
-                </button>
+                <ButtonIcon icon={"done"} className={styles.close} appearance="white"  onClick={() => setError(undefined)} text='' />
             </div>}
         </form>
     );

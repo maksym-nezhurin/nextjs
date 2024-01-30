@@ -25,8 +25,10 @@ export const GitHubProjects = () => {
                     repos.map(({ id, name, description, stargazers_count, html_url }) => {
                         return <li key={id} className="border border-gray-200 rounded-sm p-4 hover:bg-gray-100">
                             <Link href={{ pathname: html_url }} target="_blank" className="flex justify-between text-sm">
-                                <div className="font-semibold">
-                                    {name}
+                                <div>
+                                    <div className="font-semibold mb-0.5">{name}</div>
+                                    <br/>
+                                    {description}
                                 </div>
                                 <div>
                                     {stargazers_count}

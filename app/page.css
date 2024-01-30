@@ -22,7 +22,7 @@
     display: grid;
 
     text-align: center;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 70px 50px 2fr;
 }
 
 .formInnerWrapper {

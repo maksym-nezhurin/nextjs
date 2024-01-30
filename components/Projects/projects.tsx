@@ -7,6 +7,7 @@ import {sortReducer, SortReducerState} from "@/components/skillList/sort.reducer
 import {SortEnum} from "@/components/sort/sort.props";
 
 import styles from './projects.module.css';
+import cn from "classnames";
 
 interface IProjectsProps {
     projects: IProject[]
@@ -26,7 +27,10 @@ export const Projects = (props: IProjectsProps): ReactElement => {
 
     return (<div className={styles.projects}>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <div className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <div className={cn(
+                'w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400',
+                styles.innerTableContent
+            )}>
                 <div
                     className={`${styles.projectRow} ${styles.projectHeaderRow} text-xs text-gray-700 flex justify-around uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400`}>
                     <div>

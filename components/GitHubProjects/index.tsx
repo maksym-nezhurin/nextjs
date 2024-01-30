@@ -18,7 +18,7 @@ export const GitHubProjects = () => {
     }, [fetchData])
 
     return (
-        <div className="p-12">
+        <div className="lg:p-12">
             <HTag tag='h3' className="p-8">My own GitHub projects:</HTag>
             <ul className="grid grid-cols-1 gap-4">
                 {

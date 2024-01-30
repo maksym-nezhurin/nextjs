@@ -16,3 +16,7 @@
 .projectTitle {
     font-weight: bold;
 }
+
+.innerTableContent {
+    min-width: 1000px;
+}

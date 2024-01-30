@@ -44,7 +44,7 @@ export const Projects = (props: IProjectsProps): ReactElement => {
                         </a>
                     </div>
                     <div className="font-bold">Company Name</div>
-                    <div className="font-bold">Work duration</div>
+                    <div className="font-bold">Work duration (months)</div>
                     <div className="font-bold">
                         <a href="#" className="flex" onClick={() => setSort(SortEnum.finishedAt)}>
                             <span>Finished at</span>

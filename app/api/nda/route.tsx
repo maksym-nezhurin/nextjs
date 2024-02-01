@@ -21,7 +21,7 @@ export async function GET(request: Request) {
                     fontSize: 42,
                     position: 'absolute',
                     top: '60%'
-                }}>Sorry, we can't show you full details of this project</span>
+                }}>Sorry, we can&apos;t show you full details of this project</span>
             </div>
         ),
         {

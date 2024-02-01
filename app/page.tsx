@@ -33,7 +33,7 @@ export default function Home() {
 
           <GitHubProjects />
 
-          <ProjectSearch />
+          {/*<ProjectSearch />*/}
 
           <div className={'formWrapper'}>
               <HTag tag={"h3"}>Please, send me your feedback</HTag>

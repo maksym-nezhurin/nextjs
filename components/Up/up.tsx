@@ -28,7 +28,7 @@ export const Up = (): ReactElement => {
     >
         <Image
             width="24" height="24"
-            src="./images/arrow-up.png" alt="external-up-arrows-those-icons-lineal-those-icons"
+            src="/images/arrow-up.png" alt="external-up-arrows-those-icons-lineal-those-icons"
             priority
         />
     </motion.button>)

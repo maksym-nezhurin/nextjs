@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Metadata } from 'next';
 import {FULL_NAME} from "@/constants/contacts";
 import {FeedbackForm} from "@/components/feedbackForm/feedbackForm";
+import {ProjectSearch} from "@/components/ProjectSearch/projectSearch";
 import {GitHubProjects} from "@/components/GitHubProjects";
 import {HTag} from "@/components";
 
@@ -11,6 +12,8 @@ import {AboutMe} from "@/components/aboutMe/aboutMe";
 export const metadata: Metadata = {
 	title: `Personal portfolio site - ${FULL_NAME}`
 }
+
+// App Router
 
 export default function Home() {
   return (
@@ -29,6 +32,8 @@ export default function Home() {
           <AboutMe />
 
           <GitHubProjects />
+
+          {/*<ProjectSearch />*/}
 
           <div className={'formWrapper'}>
               <HTag tag={"h3"}>Please, send me your feedback</HTag>

@@ -125,7 +125,6 @@ export const projectsItems:IProject[]  = [
         duration: 2,
         country: 'Romania',
         description: 'Travel website',
-        site: 'https://www.livechat.com/',
         nda: false,
         finishedAt: 2018
     },
@@ -172,9 +171,33 @@ export const projectsItems:IProject[]  = [
         duration: 2,
         country: 'Belgium',
         description: 'PSD to HTML website',
-        site: 'AltoChange.com',
+        site: 'https://www.AltoChange.com',
         nda: false,
         finishedAt: 2017
+    },
+    {
+        id: 16,
+        status: "finished",
+        name: 'Nordic Pro',
+        company: 'Freelance',
+        duration: 3,
+        country: 'Russia',
+        description: 'Site for buying goods and services (Nordic walking poles). This is online shop, that exists in several cities around the country',
+        site: 'https://nordicpro.ru/',
+        nda: false,
+        finishedAt: 2017
+    },
+    {
+        id: 15,
+        status: "finished",
+        name: 'Country Vet Clinic',
+        company: 'Country Vet Clinic',
+        duration: 4,
+        country: 'Russia',
+        description: 'Vet clinic for your pets, this site I implemented from scratch without any frameworks or CMSs, it\'s successfully working since 2017',
+        site: 'http://gribanovovet.ru/',
+        nda: false,
+        finishedAt: 2016
     },
     {
         id: 2,

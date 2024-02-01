@@ -59,8 +59,6 @@ export default async function PageWorks({ params }: { params: { alias: string } 
 	return (
 		<>
 			<div className='works-wrapper'>
-				<h3 className="works-name">{projectDetail.name}</h3>
-				<p>{projectDetail.description}</p>
 				<ProjectDetails project={projectDetail} />
 			</div>
 		</>

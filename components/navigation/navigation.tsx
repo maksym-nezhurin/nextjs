@@ -10,7 +10,6 @@ import styles from './navigation.module.css';
 
 export const Navigation = (): JSX.Element | React.ReactNode => {
     const pathname = usePathname();
-    console.log('pathname', pathname)
 
     return (
         <div className="mb-2 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">

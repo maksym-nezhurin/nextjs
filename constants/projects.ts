@@ -41,7 +41,7 @@ export const projectsItems:IProject[]  = [
         company: 'CodeIt',
         country: 'Canada',
         duration: 4,
-        description: 'Financial Canadian company',
+        description: 'The financial Canadian company provides a list of services for their clients. I was working on the authorization flow of the users and their permissions.',
         nda: true,
         finishedAt: 2021
     },

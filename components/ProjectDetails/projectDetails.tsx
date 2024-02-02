@@ -7,8 +7,7 @@ import Link from "next/link";
 
 export const ProjectDetails = (props: { project: IProject }): ReactElement => {
     const { url, site, nda = true, name, description, company, finishedAt } = props.project;
-    // @ts-ignore
-    const finishedYear= devlOfNum(finishedAt * 1, ['year', 'year\'s', 'year\'s'])
+    const finishedYear= devlOfNum(finishedAt as number, ['year', 'year\'s', 'year\'s'])
     const projectName = nda ? 'Under NDA' : name;
     const imageUrl = nda ? '/api/nda' : url;
 

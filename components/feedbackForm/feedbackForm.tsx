@@ -13,16 +13,15 @@ import {Rating} from "@/components/rating/rating";
 import {ButtonIcon} from "@/components/buttonIcon/buttonIcon";
 
 export const FeedbackForm = (props: FeedbackFormProps) => {
-    const { className, isOpened } = props;
+    const { className, isOpened, onSubmit: onSubmitHandler } = props;
     const { register, control, handleSubmit, formState: { errors }, reset, clearErrors } = useForm<IFeedbackForm>();
     const [isSuccess, setIsSuccess] = useState<boolean>(false);
     const [error, setError] = useState<string>();
 
     const onSubmit = async (formData: IFeedbackForm) => {
         try {
-            console.log(formData)
-
             // const { data } = await axios.post<IFeedbackSentResponse>(API.review.createDemo, { ...formData, productId });
+            await onSubmitHandler(formData);
             const data = { message: 'Success'};
             if (data.message) {
                 setIsSuccess(true);

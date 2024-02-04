@@ -1,5 +1,5 @@
 import React, {Suspense} from "react";
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from "next";
 import {FULL_NAME} from "@/constants/contacts";
 import { Inter } from 'next/font/google'
 import { Navigation } from "@/components/navigation/navigation";
@@ -11,10 +11,50 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] });
 
+const APP_NAME = "PWA App";
+const APP_DEFAULT_TITLE = "My personal web site PWA App";
+const APP_TITLE_TEMPLATE = "%s - Personal web site";
+const APP_DESCRIPTION = "Best PWA app in the world! My personal web site as a senior web developer!";
+
 export const metadata: Metadata = {
-  title: 'Personal web site',
-  description: 'My personal web site as a senior web developer',
-}
+    applicationName: APP_NAME,
+    title: {
+        default: APP_DEFAULT_TITLE,
+        template: APP_TITLE_TEMPLATE,
+    },
+    description: APP_DESCRIPTION,
+    manifest: "/manifest.json",
+    appleWebApp: {
+        capable: true,
+        statusBarStyle: "default",
+        title: APP_DEFAULT_TITLE,
+        // startUpImage: [],
+    },
+    formatDetection: {
+        telephone: false,
+    },
+    openGraph: {
+        type: "website",
+        siteName: APP_NAME,
+        title: {
+            default: APP_DEFAULT_TITLE,
+            template: APP_TITLE_TEMPLATE,
+        },
+        description: APP_DESCRIPTION,
+    },
+    twitter: {
+        card: "summary",
+        title: {
+            default: APP_DEFAULT_TITLE,
+            template: APP_TITLE_TEMPLATE,
+        },
+        description: APP_DESCRIPTION,
+    },
+};
+
+export const viewport: Viewport = {
+    themeColor: "#FFFFFF",
+};
 
 // App router implementation
 

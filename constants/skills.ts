@@ -97,9 +97,9 @@ export const SKILLS: Record<SkillName, ISkill> = {
     },
     NextJS: {
         id: 10,
-        status: SkillStatus.unknown,
+        status: SkillStatus.progress,
         description: 'React framework for building server-rendered and statically generated web applications.',
-        years: 0
+        years: 0.5
     },
     NestJS: {
         id: 11,
@@ -117,7 +117,7 @@ export const SKILLS: Record<SkillName, ISkill> = {
         id: 14,
         status: SkillStatus.progress,
         description: 'The Intuitive Vue Framework. Nuxt is an open source framework that makes web development intuitive and powerful.',
-        years: 0.1
+        years: 0.2
     },
     Vue: {
         id: 13,

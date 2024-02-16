@@ -27,7 +27,7 @@ export const Up = (): ReactElement => {
         initial={{ opacity: 0 }}
     >
         <Image
-            width="24" height="24"
+            width="26" height="26"
             src="/images/arrow-up.png" alt="external-up-arrows-those-icons-lineal-those-icons"
             priority
         />

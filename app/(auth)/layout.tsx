@@ -6,9 +6,14 @@ export default function AuthLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className='hover:color: accent-amber-100 dark: forced-colors:accent-green-500'>
-      <div>This is for authenticated users only</div>
-      {children}
-    </div>
+    <>
+      <h3 className="text-4xl">
+        This is for authenticated users only
+      </h3>
+
+      <div>
+        {children}
+      </div>
+    </>
   )
 }

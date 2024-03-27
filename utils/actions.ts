@@ -1,6 +1,6 @@
 'use server';
 
-export const generateChatResponse = async (chatMessage: string): Promise<{ id: number, text: string }> => {
+export const generateChatResponse = async (chatMessage: string): Promise<{ id: number | string, text: string }> => {
 	// AI example implementation
 	/*const response = await openai.chat.completions.create({
 		messages: [
@@ -19,7 +19,7 @@ export const generateChatResponse = async (chatMessage: string): Promise<{ id: n
 	console.log(response);*/
 
 	return {
-		id: parseInt(crypto.randomUUID(), 10),
+		id: crypto.randomUUID(),
 		text: chatMessage + ' - response from server'
 	};
 }

@@ -5,7 +5,7 @@ import {generateChatResponse} from "@/utils/actions";
 import toast from "react-hot-toast";
 
 interface IMessage {
-	id: number;
+	id: number | string;
 	text: string
 }
 
@@ -31,7 +31,7 @@ export const Chat = () => {
 
 		if (value) {
 			const newMessage = {
-				id: Math.random(),
+				id: crypto.randomUUID(),
 				text: value
 			}
 			createMessage(value);
@@ -58,7 +58,7 @@ export const Chat = () => {
 
 				{
 					messages.map((message) => {
-						return <div key={message.id}>{message.text}</div>
+						return <div key={message.id} data-key={message.id}>{message.text}</div>
 					})
 				}
 			</div>

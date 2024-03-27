@@ -6,26 +6,28 @@ import './page.css';
 import {IProject, projectsItems} from "@/constants/projects";
 import {ProjectDetails} from "@/components/ProjectDetails/projectDetails";
 
-// enum WORKS_PAGES {
-// 	'big-data',
-// 	'data-science'
-// }
+/*enum WORKS_PAGES {
+	'big-data',
+	'data-science'
+}
 
-// interface IWorkData {
-// 	title: string,
-// 	description: string
-// }
+type Wow = 'big-data' | 'data';
 
-// const WORKS_DATA: Record<WORKS_PAGES, IWorkData> = {
-// 	[WORKS_PAGES['big-data']]: {
-// 		title: 'Big Data',
-// 		description: 'Big Data refers to extremely large and complex datasets that cannot be easily managed, processed, or analyzed with traditional data processing tools.'
-// 	},
-// 	[WORKS_PAGES['data-science']]: {
-// 		title: 'Data Science',
-// 		description: 'Data Science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract insights and knowledge from structured and unstructured data.'
-// 	}
-// }
+interface IWorkData {
+	title: string,
+	description: string
+}
+
+const WORKS_DATA: Record<Wow, IWorkData> = {
+	['big-data']: {
+		title: 'Big Data',
+		description: 'Big Data refers to extremely large and complex datasets that cannot be easily managed, processed, or analyzed with traditional data processing tools.'
+	},
+	['data']: {
+		title: 'Data Science',
+		description: 'Data Science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract insights and knowledge from structured and unstructured data.'
+	}
+}*/
 
 type A = Awaited<Promise<IProject | undefined>>;
 

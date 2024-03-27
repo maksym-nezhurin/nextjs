@@ -1,5 +1,8 @@
 'use client';
 import React, {useRef, useState} from "react";
+import {useMutation} from "@tanstack/react-query";
+import {generateChatResponse} from "@/utils/actions";
+import toast from "react-hot-toast";
 
 interface IMessage {
 	id: number;
@@ -10,6 +13,18 @@ export const Chat = () => {
 	const [messages, addMessage] = useState<IMessage[]>([]);
 	const inputRef = useRef<HTMLInputElement | null>(null);
 
+	const { mutate: createMessage } = useMutation({
+		mutationFn: (message: string) => generateChatResponse(message),
+		onSuccess: (data: IMessage) => {
+			if (!data) {
+				toast.error('Something went wrong!...');
+				return;
+			}
+
+			addMessage(prevState => [...prevState, data]);
+			toast.success('Message successfully generated from server!');
+		}
+	})
 	const submitMessage = (e) => {
 		e.preventDefault();
 		const value = inputRef.current?.value || '';
@@ -19,11 +34,11 @@ export const Chat = () => {
 				id: Math.random(),
 				text: value
 			}
+			createMessage(value);
 			addMessage((state) => [...state, newMessage]);
 
 			e.target.reset();
 		}
-
 	}
 
 	return (<div>
